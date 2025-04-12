@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "FactCheck - Fake News Detection",
+  "version": "1.0.0",
+  "description": "Analyze news articles and detect potential fake news using NLP and machine learning",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon-16.svg",
+      "48": "icon-48.svg",
+      "128": "icon-128.svg"
+    }
+  },
+  "icons": {
+    "16": "icon-16.svg",
+    "48": "icon-48.svg",
+    "128": "icon-128.svg"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
