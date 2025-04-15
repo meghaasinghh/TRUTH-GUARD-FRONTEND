@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>FactCheck - Fake News Detection</title>
+    <style>
+      body {
+        width: 360px;
+        height: 500px;
+        overflow-y: auto;
+        font-family: 'Inter', sans-serif;
+      }
+      .confidence-bar {
+        height: 6px;
+        border-radius: 3px;
+        background: #E5E7EB;
+        overflow: hidden;
+      }
+      .confidence-progress {
+        height: 100%;
+        transition: width 0.8s ease;
+      }
+      .criteria-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #E5E7EB;
+      }
+      .criteria-item:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
+</html>
