@@ -30,4 +30,8 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
+  preview: {
+    port: 4173,
+    allowedHosts: ["truth-guard-frontend.onrender.com"],
+  },
 });
